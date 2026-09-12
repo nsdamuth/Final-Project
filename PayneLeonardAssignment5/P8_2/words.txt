@@ -1,0 +1,10 @@
+hello
+world
+computer
+program
+school
+student
+book
+apple
+dog
+cat
