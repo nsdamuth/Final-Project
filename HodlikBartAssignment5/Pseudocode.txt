@@ -1,0 +1,57 @@
+Pseudocode for Problem 8.2 (Spell Checker):
+
+1. Start
+2. Define dictionary file name ("words.txt") and document file name ("document.txt")
+3. Create a vector of strings called `dictionary`
+4. Open the dictionary file
+5. Read each word from the dictionary file and append it to the `dictionary` vector
+6. Close the dictionary file
+7. Sort the `dictionary` vector alphabetically to enable binary searching
+8. Open the document file to be checked
+9. For each word in the document file:
+    a. Clean the word (remove punctuation and convert to lowercase)
+    b. If the cleaned word is not empty:
+        i. Check if the word is in the `dictionary` vector (using binary search)
+        ii. If the word is not found, print the word (it is misspelled)
+10. Close the document file
+11. End
+
+
+Pseudocode for Problem 8.7 (Random Monoalphabet Cipher):
+
+1. Start
+2. Read command line arguments to determine if decrypting or encrypting (-d or -e), the keyword (-kKEYWORD), the input file, and the output file
+3. Check if keyword is supplied; if not, print error and exit
+4. Generate the cipher alphabet:
+    a. Initialize an empty string `cipher` and a boolean array `used[26]` to false
+    b. For each character in the keyword:
+        i. If the character is a letter:
+            1. Convert to uppercase
+            2. If it is not in the `used` array:
+                a. Append it to `cipher`
+                b. Mark it as used in `used[26]`
+    c. Loop from 'Z' down to 'A':
+        i. If the character is not used in `used[26]`:
+            1. Append it to `cipher`
+            2. Mark it as used
+5. If decrypting is true:
+    a. Open input and output files
+    b. For each character in the input file:
+        i. If it is a letter:
+            1. Find its index in the `cipher` string
+            2. Map it back to the normal alphabet ('A' + index)
+            3. Match the case of the original character
+            4. Write to output file
+        ii. Else, write the character as-is to output file
+    c. Close files
+6. If encrypting is true (default):
+    a. Open input and output files
+    b. For each character in the input file:
+        i. If it is a letter:
+            1. Find its position in the normal alphabet (character - 'A')
+            2. Find the corresponding character in the `cipher` string at that position
+            3. Match the case of the original character
+            4. Write to output file
+        ii. Else, write the character as-is to output file
+    c. Close files
+7. End
