@@ -7,7 +7,7 @@
 ** File: 	source.cpp
 ** Description: Random monoalphabet cipher encryption and decryption.
 **
-** Author: 	Bart Hodlik, Nick Damuth, Leonard Payne, Sir loverlee Sayoto
+** Author: 	Bart Hodlik, Nick Damuth, Leonard Payne
 ** Date: 	12Sep26
 ** -------------------------------------------------------------------------*/
 
@@ -24,7 +24,7 @@ string generateCipherAlphabet(const string& keyword);
 void encryptFile(const string& inputFile, const string& outputFile, const string& cipherAlphabet);
 void decryptFile(const string& inputFile, const string& outputFile, const string& cipherAlphabet);
 
-// Author: Sir loverlee Sayoto
+// Author: Leonard Payne
 int main(int argc, char* argv[]) {
     if (argc < 4) {
         cerr << "Usage: crypt [-d|-e] -kKEYWORD input.txt output.txt" << endl;

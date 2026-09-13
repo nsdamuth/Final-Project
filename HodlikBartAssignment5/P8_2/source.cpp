@@ -8,7 +8,7 @@
 ** Description: A program that checks the spelling of all words in a file by
 **              comparing them to a dictionary vector.
 **
-** Author: 	Bart Hodlik, Nick Damuth, Leonard Payne, Sir loverlee Sayoto
+** Author: 	Bart Hodlik, Nick Damuth, Leonard Payne,
 ** Date: 	12Sep26
 ** -------------------------------------------------------------------------*/
 
@@ -27,7 +27,7 @@ bool isWordInDictionary(const string& word, const vector<string>& dictionary);
 string cleanWord(const string& word);
 void checkSpelling(const string& documentFilename, const vector<string>& dictionary);
 
-// Author: Sir loverlee Sayoto
+// Author: Nick Damuth
 int main() {
     vector<string> dictionary;
     string dictFile = "words.txt";
